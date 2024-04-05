@@ -36,3 +36,5 @@ class Rook(Piece):
                     if board.get_piece(row, col+i) is not None:
                         return False
         return True
+    def can_attack (self, board, row: int, col: int, row_1:int, col_1: int) -> bool:
+        return self.can_move(self, board, row, col, row_1, col_1)
